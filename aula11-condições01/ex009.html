@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País de Origem</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+
+    Onde você nasceu? <input type="text" name="local" id="local"> <!--infor de texto do usuário-->
+
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <!--botão para fazer a ação-->
+
+    <div id="resp"></div><!--Para mostrar a resposta logo a baixo-->
+    
+    <script>
+        //função:
+        function nacionalidade() {
+
+            var pais = window.document.querySelector('input#local').value //.value serviu para pegar o texto dentro do input
+        
+            //associando elemento a variável
+            var nac = window.document.querySelector('div#resp')
+
+            nac.innerHTML = `<p>Você nasceu no(a) <strong>${pais[0].toUpperCase()+pais.substring(1)}</strong>.</p>` //[0].toUpperCase()+pais.substring(1) serviu para sempre tornar a primeira letra da variável em maiúscula
+
+            if (pais == 'Brasil'||pais == 'brasil')/*aqui usamos o OU=|| para recorrer a duas opções*/ {
+                nac.innerHTML += `<p>Você é <strong>brasileiro</strong>!` 
+            }else{
+                nac.innerHTML += `<p>Você é <strong>estrangeiro</strong>.` 
+            }
+        }
+    </script>
+</body>
+</html>

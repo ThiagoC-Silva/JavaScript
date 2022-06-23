@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 3</title>
+    <style>
+        *{
+            height: 100%;
+        }
+        body {
+            background-image: linear-gradient(to bottom , rgb(100, 29, 214), black);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*  
+            // number + number -> Adição
+            // string + string -> Concatenação
+        
+            CONVERTER DE STRING PARA NUMBER:
+
+            Number.parseInt() - Para números inteiros
+            Number.parseFlat() - Para número Reais
+            Number() - O JS decide de acordo com o número recebido
+        
+            CONVERTER DE NUMBER PARA STRING:
+
+            String() ou .toString()
+        */
+        var n1 = Number(window.prompt('Digite um número: ')) // Por padrão o prompt entrega uma string
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a: ${s}`)
+        /*
+            no lugar de:
+            window.alert('A soma entre ' + n1 + ' e ' + n2 + ' é igual a: ' + s)
+            
+            faça:
+            window.alert(`A soma entre ${n1} e ${n2} é igual a: ${s}`)
+        */
+    </script>
+</body>
+</html>

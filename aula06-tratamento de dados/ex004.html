@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <style>
+        * {
+            height: 100%;
+        }
+
+        body {
+
+            background-image: linear-gradient(to bottom, rgb(100, 29, 214), black);
+            color: white;
+            font: normal 1.5em Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+            .Length - quantidade de letras da string (contando com os espaços)
+            .toUpperCase() - Tudo para maiúsculas
+            .toLowerCase() - Tudo para minúsculas
+
+            .toFixed(n) - Quantas casa decimais
+            .replace - trocar um elemento por outro
+
+            Macete pra por unidade da moeda:
+            .toLocaleString('pr-BR', {style: 'currency', currency: 'BRL'})
+        */
+        var nome = window.prompt('Qual é seu nome?')
+        var salário = Number(window.prompt(`Qual seu salário?`)) 
+        document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras. <br>`) 
+        document.write(`Seu nome com apenas maiúsculas é ${nome.toUpperCase()}. <br>`)
+        document.write(`Seu nome com apenas minúsculas é ${nome.toLowerCase()} <br>`)
+        document.write(`Seu salário: ${salário.toFixed(2).replace('.', ',')}.`)
+    </script>
+</body>
+</html>
